@@ -11,10 +11,10 @@ const ingredientsEl = document.querySelector('#ingredients')
 
 
 
-const ingperEl = ingredients.map(el => {
+const ingperEl = ingredients.map(ingredient => {
   
   const navItemEl = document.createElement('li');
-  navItemEl.textContent = el;
+  navItemEl.textContent = ingredient;
   navItemEl.classList.add('item');
   return navItemEl
 
