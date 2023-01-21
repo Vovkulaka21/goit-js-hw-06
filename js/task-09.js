@@ -10,8 +10,9 @@ colorButton.addEventListener('click', changeBgColorRandom);
 
 function changeBgColorRandom () {
 
-  
-  backgroundColor.style.backgroundColor = getRandomHexColor();
-  colorName.textContent = `${getRandomHexColor()}`
+  const changedColor = getRandomHexColor();
+
+  backgroundColor.style.backgroundColor = changedColor;
+  colorName.textContent = `${changedColor}`
 
 }

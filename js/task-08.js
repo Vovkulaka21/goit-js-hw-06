@@ -6,16 +6,16 @@ function loginFormSubmit (event) {
 
     event.preventDefault();
 
-    const mail = event.currentTarget.email.value;
-    const password = event.currentTarget.password.value
+    const mail = event.currentTarget.email.value.trim();
+    const password = event.currentTarget.password.value;
 
-    if (mail === '' || password === '') {
+    if (!mail || !password) {
 
-      alert('Please fill empty field')
+     return alert('Please fill empty field');
 
-    }
+    };
 
-    const result = { mail: mail, password: password };
+    const result = { mail, password };
 
     console.log(result);
     
