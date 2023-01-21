@@ -7,10 +7,13 @@ function inputBlur(event) {
   const valueLength = event.currentTarget.value.length;
   const inputLength = Number(event.currentTarget.dataset.length);
     if (valueLength === inputLength) {
-        myInput.classList.add("valid")
-        myInput.classList.remove("invalid")
+        classChange ('invalid', 'valid' )
     }   else {
-        myInput.classList.add("invalid")
-        myInput.classList.remove("valid")
+        classChange ('valid', 'invalid' )
     }
+}
+
+function classChange (valid, invalid) {
+    myInput.classList.add(`${invalid}`)
+    myInput.classList.remove(`${valid}`)
 }
